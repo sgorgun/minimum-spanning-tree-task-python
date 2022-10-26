@@ -1,8 +1,8 @@
 """Template for programming assignment: build MST using the Prim's algorithm."""
-from typing import List
+from typing import List, Tuple
 
 
-def prim_mst(n: int, edges: List[List[int]]) -> int:
+def prim_mst(n: int, edges: List[List[int]]) -> Tuple[List[int], int]:
     """
     Returns the order of adding vertices to MST according to the Prim's algorithm and
     the weight of MST for an undirected weighted graph.
