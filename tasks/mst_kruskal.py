@@ -1,5 +1,5 @@
 """Template for programming assignment: build MST using the Kruskal algorithm."""
-from typing import List, Tuple
+from typing import List
 
 
 class DisjointSets:
@@ -42,7 +42,7 @@ def kruskal_mst(n: int, edges: List[List[int]]) -> int:
 
     Parameters:
         n (int) : number of vertices in the graph, vertices are enumerated from 0 to n-1
-        edges (List[Tuple[int, int, int]]): contains the indexes of the connected vertices and weight for this edge.
+        edges (List[List[int]]): contains the indexes of the connected vertices and weight for this edge.
     Returns:
          int: weight of MST
     """
