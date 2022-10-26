@@ -109,6 +109,7 @@ Expected algorithm complexity is O(N^2), N - number of vertices.
 Vertices are enumerated from `0` to `n-1`.
 
 Expected algorithm complexity is O(N^2), N - number of vertices.
+N^2 ~ M, M - number of edges.
 
 Starting vertex should be 0. If there are several possible vertices to choose at any iteration, vertex with the smallest index should be added.  If no MST exists, please, return (None, None).
 
