@@ -52,7 +52,7 @@ class DisjointSets:
 def kruskal_mst(n: int, edges: List[List[int]]) -> int:
     """
     Returns the weight of MST for an undirected weighted graph.
-    Expected algorithm complexity is O(MlogN), M - number of edges, M << N^2, where N - number of vertices.
+    Expected algorithm complexity is O(MlogM), M - number of edges, M << N^2, where N - number of vertices.
     Vertices are enumerated from 0 to N-1, there N - number of vertices.
 
     If no MST exists, please, return None.
@@ -114,7 +114,7 @@ N^2 ~ M, M - number of edges.
 Starting vertex should be 0. If there are several possible vertices to choose at any iteration, vertex with the smallest index should be added.  If no MST exists, please, return (None, None).
 
 ```python
-def prim_mst(n: int, edges: List[List[int]]) -> int:
+def prim_mst(n: int, adj_matrix: List[List[int]]) -> Tuple[List[int], int]:
     """
     Returns the order of adding vertices to MST according to the Prim's algorithm and
     the weight of MST for an undirected weighted graph.
@@ -134,7 +134,7 @@ def prim_mst(n: int, edges: List[List[int]]) -> int:
 
     Parameters:
         n (int) : number of vertices in the graph, vertices are enumerated from 0 to n-1
-        edges (List[List[int]): adjacency matrix
+        adj_matrix (List[List[int]): adjacency matrix
     Returns:
         List[int], int: order of adding vertices to MST, the weight of MST
     """

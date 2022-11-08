@@ -30,7 +30,7 @@ class DisjointSets:
 def kruskal_mst(n: int, edges: List[List[int]]) -> int:
     """
     Returns the weight of MST for an undirected weighted graph.
-    Expected algorithm complexity is O(MlogN), M - number of edges, M << N^2, where N - number of vertices.
+    Expected algorithm complexity is O(MlogM), M - number of edges, M << N^2, where N - number of vertices.
     Vertices are enumerated from 0 to N-1, there N - number of vertices.
 
     If no MST exists, please, return None.

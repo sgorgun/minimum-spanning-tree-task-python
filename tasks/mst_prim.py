@@ -2,7 +2,7 @@
 from typing import List, Tuple
 
 
-def prim_mst(n: int, edges: List[List[int]]) -> Tuple[List[int], int]:
+def prim_mst(n: int, adj_matrix: List[List[int]]) -> Tuple[List[int], int]:
     """
     Returns the order of adding vertices to MST according to the Prim's algorithm and
     the weight of MST for an undirected weighted graph.
@@ -22,7 +22,7 @@ def prim_mst(n: int, edges: List[List[int]]) -> Tuple[List[int], int]:
 
     Parameters:
         n (int) : number of vertices in the graph, vertices are enumerated from 0 to n-1
-        edges (List[List[int]): adjacency matrix
+        adj_matrix (List[List[int]): adjacency matrix
     Returns:
         List[int], int: order of adding vertices to MST, the weight of MST
     """
