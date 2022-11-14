@@ -19,7 +19,7 @@ The coding exercises cover the following practical problems:
 Given the number of vertices `n`, graph edges `edges` of an undirected weighted graph, implement the function below to find out the weight of MST using Kruskal's algorithm. 
 Vertices are enumerated from `0` to `n-1`. Each edge in `edges` is a combination of indexes of the connected vertices and weight for this edge.
 
-Expected algorithm complexity is O(MlogN), M - number of edges, M << n^2, where N - number of vertices.
+Expected algorithm complexity is O(MlogM), M - number of edges, M << N^2, where N - number of vertices.
 
 If no MST exists, please, return None.
 
