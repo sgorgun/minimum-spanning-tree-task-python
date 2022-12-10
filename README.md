@@ -114,32 +114,36 @@ Given the number of vertices `n` and the graph adjacency weighted matrix `edges`
 The expected algorithm complexity is O(N^2), where N is the number of vertices; M ~ N^2, and M is the number of edges.
 The vertices are enumerated from `0` to `n-1`.
 
-The starting vertex should be 0. If several vertices can be chosen at any iteration, the one with the smallest index should be added.  If no MST exists, please return (None, None).
+The starting vertex should be 0. If several vertices can be chosen at any iteration, the one with the smallest index should be added. If no MST exists, please return (None, None).
 
 ```python
-def prim_mst(n: int, edges: List[List[int]]) -> int:
+def prim_mst(n: int, adj_matrix: List[List[int]]) -> Tuple[List[int], int]:
     """
-    Returns the order of adding vertices to MST according to the Prim's algorithm and
-    the weight of MST for an undirected weighted graph.
-    Expected algorithm complexity is O(N^2), N - number of vertices.
-    Vertices are enumerated from 0 to N-1, there N - number of vertices.
+    Returns the order of adding vertices to the MST according to Prim's algorithm and
+    the weight of the MST for an undirected weighted graph.
+    The expected algorithm complexity is O(n^2).
+    The vertices are enumerated from 0 to n-1, there n is the number of vertices.
 
-    Starting vertex should be 0.
-    If there are several possible vertices to choose at any iteration,
-    vertex with the smallest index should be added.
-    If no MST exists, please, return (None, None).
+    The starting vertex should be 0.
+    If several vertices can be chosen at any iteration, the one with the smallest index 
+    should be added. If no MST exists, please return (None, None).
 
-    E.g. there is a graph with 5 vertices from 0 to 4 and adjacency matrix with weight
-    [[0, 2, 0, 6, 0], [2, 0, 3, 8, 5], [0, 3, 0, 0, 7], [6, 8, 0, 0, 9], [0, 5, 7, 9, 0]].
-    0 means absence of edge, positive value means edge existence and shows its weight.
-    MST is {(0,1), (1,2), (0,3), (1,4)} with weight 16.
-    Order of adding vertices to MST is [0, 1, 2, 4, 3].
+    Suppose there is a graph with five vertices from 0 to 4 and an adjacency matrix
+    [[0, 2, 0, 6, 0], 
+     [2, 0, 3, 8, 5], 
+     [0, 3, 0, 0, 7], 
+     [6, 8, 0, 0, 9], 
+     [0, 5, 7, 9, 0]].
+
+    0 means the absence of an edge, and a positive value means an edge exists and shows its weight.
+    The MST is {(0,1), (1,2), (0,3), (1,4)} with a weight of 16.
+    The vertices are added to the MST in the following order [0, 1, 2, 4, 3].
 
     Parameters:
         n (int) : number of vertices in the graph, vertices are enumerated from 0 to n-1
-        edges (List[List[int]): adjacency matrix
+        adj_matrix (List[List[int]): adjacency matrix
     Returns:
-        List[int], int: order of adding vertices to MST, the weight of MST
+        List[int], int: order of adding vertices to MST, weight of the MST
     """
     pass
 ```
@@ -177,5 +181,6 @@ graph TD;
 
 Expected result: `None`, `None`
 
+<br/>
 
-Please use a template for the implementation (`tasks/mst_prim:prim_mst`).
+Please use the template `tasks/mst_prim:prim_mst` for the implementation.
