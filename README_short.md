@@ -2,12 +2,12 @@
 
 ## Purpose
 
-The coding exercises are designed to test knowledge of the following concepts:
+The coding exercises are designed to test your knowledge of the following concepts:
 
-* Finding MST and its weight
+* Finding an MST and its weight
 
 ## Overview
 
 The coding exercises cover the following practical problems:
-* Building MST using Kruskal's algorithm 
-* Building MST using Prim's algorithm
+* Building an MST using Kruskal's algorithm 
+* Building an MST using Prim's algorithm
