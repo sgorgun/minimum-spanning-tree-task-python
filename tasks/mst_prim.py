@@ -30,4 +30,27 @@ def prim_mst(n: int, adj_matrix: List[List[int]]) -> Tuple[List[int], int]:
     Returns:
         List[int], int: order of adding vertices to MST, weight of the MST
     """
-    pass
+    mst = [0]
+    mst_weight = 0
+
+    added_vertices = set([0])
+
+    while len(mst) < n:
+        min_weight = float('inf')
+        min_vertex = None
+
+        for vertex in added_vertices:
+            for neighbor in range(n):
+                if neighbor not in added_vertices and adj_matrix[vertex][neighbor] > 0:
+                    if adj_matrix[vertex][neighbor] < min_weight:
+                        min_weight = adj_matrix[vertex][neighbor]
+                        min_vertex = neighbor
+
+        if min_vertex is None:
+            return (None, None)
+
+        mst.append(min_vertex)
+        mst_weight += min_weight
+        added_vertices.add(min_vertex)
+
+    return mst, mst_weight
