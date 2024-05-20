@@ -1,7 +1,6 @@
 """Template for programming assignment: build MST using Prim's algorithm."""
 from typing import List, Tuple
 
-
 def prim_mst(n: int, adj_matrix: List[List[int]]) -> Tuple[List[int], int]:
     """
     Returns the order of adding vertices to the MST according to Prim's algorithm and
@@ -30,12 +29,12 @@ def prim_mst(n: int, adj_matrix: List[List[int]]) -> Tuple[List[int], int]:
     Returns:
         List[int], int: order of adding vertices to MST, weight of the MST
     """
-    mst = [0]
-    mst_weight = 0
+    minimum_spanning_tree = [0]
+    total_weight = 0
 
     added_vertices = set([0])
 
-    while len(mst) < n:
+    while len(minimum_spanning_tree) < n:
         min_weight = float('inf')
         min_vertex = None
 
@@ -49,8 +48,8 @@ def prim_mst(n: int, adj_matrix: List[List[int]]) -> Tuple[List[int], int]:
         if min_vertex is None:
             return (None, None)
 
-        mst.append(min_vertex)
-        mst_weight += min_weight
+        minimum_spanning_tree.append(min_vertex)
+        total_weight += min_weight
         added_vertices.add(min_vertex)
 
-    return mst, mst_weight
+    return minimum_spanning_tree, total_weight

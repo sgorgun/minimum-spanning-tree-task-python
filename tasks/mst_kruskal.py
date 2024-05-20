@@ -54,22 +54,24 @@ def kruskal_mst(n: int, edges: List[List[int]]) -> int:
     Returns:
          int: weight of MST
     """
-    edges.sort(key=lambda x: x[2])
-    mst_weight = 0
+    def get_weight(edge):
+        return edge[2]
+    edges.sort(key=get_weight)
+    minimum_spanning_tree_weight = 0
     disjoint_sets = DisjointSets()
 
-    for i in range(n):
-        disjoint_sets.make_set(i)
+    for vertex in range(n):
+        disjoint_sets.make_set(vertex)
 
     for edge in edges:
         u, v, weight = edge
         if disjoint_sets.find_set(u) != disjoint_sets.find_set(v):
             disjoint_sets.union_sets(u, v)
-            mst_weight += weight
+            minimum_spanning_tree_weight += weight
 
     root = disjoint_sets.find_set(0)
-    for i in range(1, n):
-        if disjoint_sets.find_set(i) != root:
+    for vertex in range(1, n):
+        if disjoint_sets.find_set(vertex) != root:
             return None
 
-    return mst_weight
+    return minimum_spanning_tree_weight
